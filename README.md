@@ -15,8 +15,8 @@ API Request Header Requirements:
 - x-requester: username of the submitter
 - Content-Type: multipart/form-data
 
-API Method: POST
-Body: binary (file upload)
+- API Method: POST
+- Body: binary (file upload)
 
 Known Limitations:
 - Max text file size: 10MB
