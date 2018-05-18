@@ -1,14 +1,12 @@
 # Tech-Task
 
-Infrastructure Requirements:
-- AWS Lambda Function with the Python code in this repo
-- API Gateway with a resource and a POST method for the resources
-- Binary Support enabled on the API for Content-Type multipart/form-data
-- Integration Request Body Mapping for Content-Type multipart/form-data
-- API Gateway Integration to the Lambda Function 
-- S3 Bucket for Output Files
-- S3 Bucket for Keywords Text File
-- Dynamo DB Table for tracking API requests
+Implementation Steps:
+- Clone the repo locally
+- Upload the process_file.zip file from the dependencies directory to a holding bucket
+- Deploy the Cloudformation template inputting the bucket name where you uploaded the zip file
+- In the keywords bucket upload the Keywords.txt file from the dependencies directory
+- In the API Gateway confirm/reset the Body Mapping for the Integration request. This should be generated from the Method Request Passthrough template
+- Make any other adjustments desired and deploy the API to a new stage
 
 API Request Header Requirements:
 - x-api-key: Valid API Key
